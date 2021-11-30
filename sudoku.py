@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Iterable, Sequence
+from typing import Iterable
 from operator import itemgetter
 
 
@@ -33,13 +33,11 @@ class Sudoku:
     def unplace(self, x: int, y: int) -> None:
         """Remove (unplace) a number at x,y."""
         self._grid[y][x] = 0
-        
 
     def value_at(self, x: int, y: int) -> int:
         """Returns the value at x,y."""
         value = self._grid[y][x]
         return value
-
 
     def options_at(self, x: int, y: int) -> Iterable[int]:
         """Returns all possible values (options) at x,y."""
